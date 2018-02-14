@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+cldar<!DOCTYPE html>
 
 <html>
 <head>
@@ -55,12 +55,38 @@
       }
     }
 
+    class Button extends React.Component {
+      constructor() {
+        super();
+        this.state = {
+          count: 0,
+        };
+      }
+
+      updateCount() {
+        this.setState((prevState, props) => {
+          return {count: prevState.count + 1}
+        });
+      }
+
+      render() {
+        return (
+          <div>
+            <h3>Click me!</h3>
+            <button onClick={() => this.updateCount()}>
+            Clicked {this.state.count} times </button>
+          </div>
+        );
+      }
+    }
+
     class HomePage extends React.Component {
       render() {
         return (
           <div>
             <Greeting name="Bloc Student"/>
             <Clock />
+            <Button />
           </div>
         );
       }
