@@ -80,6 +80,17 @@ cldar<!DOCTYPE html>
       }
     }
 
+    class Closing extends React.Component {
+      render () {
+        return (
+          <div>
+            <h2>Thanks for stopping by!</h2>
+          </div>
+        );
+      }
+
+    }
+
     class HomePage extends React.Component {
       render() {
         return (
@@ -87,6 +98,7 @@ cldar<!DOCTYPE html>
             <Greeting name="Bloc Student"/>
             <Clock />
             <Button />
+            <Closing />
           </div>
         );
       }
